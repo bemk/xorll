@@ -10,7 +10,7 @@ LDFLAGS=
 #TARGET
 TARGET=xorll
 
-SRCF = main.c list_init.c
+SRCF = main.c list_init.c list_clean.c
 OBJS = $(SRCF:.c=.o)
 
 .PHONY: all

@@ -21,6 +21,8 @@ struct list {
 
 struct list* list_init();
 struct node* node_init(struct list* lst);
+int list_clean(struct list* lst);
+int node_purge(struct node* this, struct node* prev);
 
 #ifdef __cplusplus
 }
