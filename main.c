@@ -1,33 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-struct list;
-
-struct node {
-        void* ptr;
-        int data;
-        struct list* lst;
-};
-
-struct list {
-        struct node* head;
-        struct node* tail;
-};
-
-struct node*
-node_init(struct list* lst)
-{
-        struct node* n = malloc(sizeof(*n));
-        if (n == NULL)
-        {
-                fprintf(stderr, "OUT OF MEMORY!\n");
-                exit(1);
-        }
-        memset(n, 0, sizeof(*n));
-        n->lst = lst;
-        return n;
-}
+#include "list.h"
 
 struct node*
 node_get_next(struct node* prev, struct node* this)
@@ -172,19 +146,6 @@ int node_add_head(struct list* lst, struct node* this)
         }
         node_insert(NULL, lst->head, this);
         return 0;
-}
-
-struct list*
-list_init()
-{
-        struct list* lst = malloc(sizeof(*lst));
-        if (lst == NULL)
-        {
-                fprintf(stderr, "OUT OF MEMORY!\n");
-                exit(1);
-        }
-        memset(lst, 0, sizeof(*lst));
-        return lst;
 }
 
 void debug_list(struct list* lst)

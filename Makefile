@@ -4,13 +4,13 @@
 
 CC=gcc
 LD=gcc
-CCFLAGS=-c
+CCFLAGS=-c -Wall
 LDFLAGS=
 
 #TARGET
 TARGET=xorll
 
-SRCF = main.c
+SRCF = main.c list_init.c
 OBJS = $(SRCF:.c=.o)
 
 .PHONY: all
