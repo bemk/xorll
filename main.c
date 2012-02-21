@@ -56,7 +56,7 @@ struct node* prev;
 
         struct node* next = (void*)this_next;
 
-        if (!prev && !next)
+        if (this->ptr == NULL)
         {
                 this->lst->head = NULL;
                 this->lst->tail = NULL;
@@ -270,7 +270,6 @@ int main(int argc, char** argv)
         node_purge(n3, n2);
         debug_list(lst);
         list_clean(lst);
-        debug_list(lst);
 
         return EXIT_SUCCESS;
 }
