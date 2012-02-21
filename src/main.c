@@ -3,6 +3,15 @@
 #include <string.h>
 #include "list.h"
 
+/**
+ * \fn main
+ * \brief Entry point and test-suite for the linked-list
+ * \param argc
+ * \brief Number of arguments
+ * \param argv
+ * \brief array of arguments
+ * \return Error code!
+ */
 int main(int argc, char** argv)
 {
         struct list* lst = list_init();
@@ -40,3 +49,5 @@ int main(int argc, char** argv)
 
         return EXIT_SUCCESS;
 }
+
+/** \file */

@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include "list.h"
 
+/**
+ * \fn list_clean
+ * \brief Clean up the entire list
+ * \param lst
+ * \brief The list to clean up
+ * \return An error code
+ */
 int
 list_clean(struct list* lst)
 {
@@ -12,6 +19,15 @@ list_clean(struct list* lst)
         return 0;
 }
 
+/**
+ * \fn node_purge
+ * \brief Purge a node from the list
+ * \param this
+ * \brief The node to purge
+ * \param prev
+ * \brief The node before the this node
+ * \return Error code
+ */
 int
 node_purge(this, prev)
 struct node* this;

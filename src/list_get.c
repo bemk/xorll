@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "list.h"
 
+/**
+ * \fn node_get_next
+ * \brief Return the next node from this
+ * \param prev
+ * \brief The previous pointer to be xor'd out of this->ptr
+ * \param this
+ * \brief The node holding the actual pointer
+ * \return The next node pointed to by this as viewed by previous
+ */
 struct node*
 node_get_next(struct node* prev, struct node* this)
 {
@@ -13,6 +22,12 @@ node_get_next(struct node* prev, struct node* this)
         return (struct node*)l_next;
 }
 
+/**
+ * \fn debug_list
+ * \brief Dump all the nodes in the current list on stdout
+ * \param lst
+ * \brief the list to dump
+ */
 void debug_list(struct list* lst)
 {
         struct node* carriage = lst->head;
@@ -30,3 +45,5 @@ void debug_list(struct list* lst)
         }
         fprintf(stdout, "\n");
 }
+
+/** \file */

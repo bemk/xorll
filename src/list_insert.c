@@ -2,6 +2,18 @@
 #include <stdlib.h>
 #include "list.h"
 
+/**
+ * \fn node_insert
+ * \brief Insert a node into the list between two other nodes
+ * \param prev
+ * \brief The node to go before the inserted node
+ * \param next
+ * \brief The node to go after the inserted node
+ * \param this
+ * \brief The node to be inserted
+ * \warning The prev and next nodes MUST be adjacent in the list
+ * \return Error code
+ */
 int
 node_insert(prev, next, this)
 struct node* prev;
@@ -39,6 +51,15 @@ struct node* this;
         return 0;
 }
 
+/**
+ * \fn node_add_tail
+ * \brief Add a node to the end of the list
+ * \param lst
+ * \brief The list to insert the node into
+ * \param this
+ * \brief the node to be inserted
+ * \return Error code
+ */
 int
 node_add_tail(struct list* lst, struct node* this)
 {
@@ -60,6 +81,15 @@ node_add_tail(struct list* lst, struct node* this)
         return 0;
 }
 
+/**
+ * \fn node_add_head
+ * \brief Add a node to the head of the list
+ * \param lst
+ * \brief The list ot insert the node into
+ * \param this
+ * \brief The node to be inserted
+ * \return Error code
+ */
 int node_add_head(struct list* lst, struct node* this)
 {
         if (lst->head == NULL)
@@ -79,3 +109,5 @@ int node_add_head(struct list* lst, struct node* this)
         node_insert(NULL, lst->head, this);
         return 0;
 }
+
+/** \file */

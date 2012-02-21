@@ -3,6 +3,11 @@
 #include <string.h>
 #include "list.h"
 
+/**
+ * \fn list_init
+ * \brief Initialise a new list
+ * \return The newly created list element
+ */
 struct list*
 list_init()
 {
@@ -16,6 +21,13 @@ list_init()
         return lst;
 }
 
+/**
+ * \fn node_init
+ * \brief Create a new node
+ * \param lst
+ * \brief The list of which the node will eventually be part
+ * \return The newly created node
+ */
 struct node*
 node_init(struct list* lst)
 {

@@ -3,6 +3,17 @@
 #include <string.h>
 #include "list.h"
 
+/**
+ * \fn list_copy_list
+ * \brief Copy the list to the end of the new list
+ * Due to some quirk in the code, if new isn't empty it'll just append parent
+ * Parent will not be touched though.
+ * \param parent
+ * \brief The list to copy from
+ * \param new
+ * \brief The list to append the nodes to
+ * \return The new pointer
+ */
 struct list*
 list_copy_list(struct list* parent, struct list* new)
 {
@@ -33,3 +44,5 @@ list_copy_list(struct list* parent, struct list* new)
 
         return new;
 }
+
+/** \file */
